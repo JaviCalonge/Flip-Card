@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(154, 194, 252);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: clamp(150px, 100%, 340px);
+  margin: 50px auto;
+  position: relative;
+  background-color: #fff;
+}
+
+.card-worker {
+  max-height: 210px;
+  overflow: hidden;
+  display: block;
+}
+
+.card-worker2 {
+  filter: grayscale();
+}
+
+.card-worker img {
+  max-width: 100%;
+}
+
+.card-data {
+    padding: 12px;
+    margin: 0 10px;
+}
+
+.card-data span {
+  font-size: 1.6rem;
+}
+
+.card-front {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.card:hover .card-front {
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 2s;
+} 
+
+.card:hover .card-back {
+  transform: perspective(1000px) rotateY(360deg);
+  transition: transform 2s;
+} 
+
+.card-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* display: grid; */
+  place-content: center;
+  margin: 0px;
+  margin-left: 30px;
+  margin-top: 20px;
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.card-back span {
+  padding: 6px;
+  margin: 0 20px;
+  font-size: 1.6rem;
+}
+
+.card-back ul {
+  padding: 10px;
+}
+
+.card-back li {
+  padding: 8px;
+  margin: 0 30px;
+}
+
+.card-back, .card-front { 
+  backface-visibility: hidden;
+}
+
+.card-front2 {
+  transform: perspective(300px) rotateY(0deg);
+}
+
+.card:hover .card-front2 {
+  transform: perspective(300px) rotateY(180deg);
+  transition: transform 2s;
+} 
+
+.card:hover .card-back {
+  transform: perspective(300px) rotateY(360deg);
+  transition: transform 2s;
+}
+
+.skill-bar {
+  border: 2px solid #48e;
+  max-width: 60%;
+  margin: 10px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.skill-bar div {
+ background-color: #48e;
+ color: #fff;
+ border-radius: 2px;
+}
